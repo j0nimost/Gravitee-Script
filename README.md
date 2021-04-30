@@ -9,7 +9,7 @@ This Script will start Gravitee.
 ### Why this script?
 As the complexity of your services increases you may find yourself periodically restarting your services to ensure optimal perfomance.
 
-Since restarting gravitee can be slow at times this scripts will handle that for you.
+Since restarting Gravitee can be slow at times and this script will handle that for you.
 
 #### NOTE: THIS IS FOR THE LINUX ENVIRONMENT
 

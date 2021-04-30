@@ -16,9 +16,9 @@ startGravitee(){
     echo "Starting Management...\n"
     sudo ./bin/gravitee -d -p=/var/run/management.pid
 
-    sleep 1m
+    sleep 35
     clear
-    cd ../
+    kill $PPID
 
 }
 
@@ -30,12 +30,18 @@ killGravitee(){
     sudo kill `cat /var/run/management.pid`
 
 }
+ 
+ usage() { echo "Usage [s] [k]" }
 
+case "$1" in 
+    s) 
+        startGravitee
+        ;;
+    k)
+        killGravitee
+        ;;
+    *)
+        usage
+        ;;
 
-while getopts s:k: flag
-do
-    case "${flag}" in
-        s) startGravitee;;
-        k) killGravitee;;
-    esac
-done
+esac
