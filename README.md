@@ -27,8 +27,10 @@ On FIRST install run the below command;
 
 To start Gravitee run the following command
 
-- `./gravitee.sh -s` 
+- `./gravitee.sh s` 
 
 To stop Gravitee run the following command
 
-- `./gravitee.sh -k`
+- `./gravitee.sh k`
+
+### NOTE: Gravitee sometimes fails to obey SIGINT commands you may be forced to exit the session completely
